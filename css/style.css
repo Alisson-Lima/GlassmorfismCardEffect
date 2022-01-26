@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: MontBold;
+  src: url(../font/Montserrat-Bold.otf);
+}
+
+@font-face {
+  font-family: MontLigth;
+  src: url(../font/Montserrat-Light.otf);
+}
+
+@-webkit-keyframes circles1 {
+  0% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  50% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+}
+
+@keyframes circles1 {
+  0% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  50% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+  100% {
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+}
+
+@-webkit-keyframes circles2 {
+  0% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  50% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+@keyframes circles2 {
+  0% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  50% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+h1 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: MontBold;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: .875rem;
+  font-family: MontLigth;
+  text-transform: uppercase;
+}
+
+body {
+  background: #151515;
+}
+
+body .container {
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+body .container h1, body .container h3, body .container p, body .container h2 {
+  color: #f0f0f0;
+}
+
+body .container .cardContainer {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  margin-top: 50px;
+}
+
+body .container .cardContainer .circulo {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: 150px;
+  top: -50px;
+  margin-top: 50px;
+  border-radius: 100%;
+  background: linear-gradient(30deg, #FF007A, #FFAA05);
+  -webkit-animation: circles1 5s linear;
+          animation: circles1 5s linear;
+  -webkit-animation-direction: linear;
+          animation-direction: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+body .container .cardContainer .circulo:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 420px;
+  left: -20px;
+  -webkit-animation: circles2 3s normal;
+          animation: circles2 3s normal;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+body .container .cardContainer .card {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 500px;
+  height: 320px;
+  top: calc(50% - 160px);
+  left: calc(50% - 250px);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 50px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+
+body .container .cardContainer .card p {
+  position: relative;
+  font-size: 1.8rem;
+  bottom: 0;
+}
+
+@media screen and (min-width: 700px) {
+  body .container h3 {
+    font-size: 20px;
+  }
+  body .container h1 {
+    font-size: 50px;
+  }
+  body .container .cardContainer .circulo:nth-child(1) {
+    top: 30px;
+    left: 200px;
+  }
+  body .container .cardContainer .circulo:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 350px;
+    left: -80px;
+  }
+  body .container .cardContainer .card {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
