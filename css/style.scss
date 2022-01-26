@@ -25,11 +25,11 @@
 }
 @keyframes circles2{
     0%{
-        transform: translateX(-15px);
-    }50%{
         transform: translateX(15px);
-    }100%{
+    }50%{
         transform: translateX(-15px);
+    }100%{
+        transform: translateX(15px);
     }
 }
 h1{
@@ -75,7 +75,7 @@ body{
                 border-radius: 100%;
                 background: $gradiente;
 
-                animation: circles1 5s linear;
+                animation: circles1 5s normal;
                 animation-direction: linear;
                 animation-iteration-count: infinite;
             }
@@ -84,7 +84,7 @@ body{
                 height: 150px;
                 top: 420px;
                 left: -20px;
-                animation: circles2 3s normal;
+                animation: circles2 5s normal;
                 animation-direction: normal;
                 animation-iteration-count: infinite;
             }
@@ -103,12 +103,20 @@ body{
                 border-radius: 20px;
                 padding: 50px;
                 backdrop-filter: blur(30px);
-
+                cursor: pointer;
+                transition: .5s;
                 p{
                     position: relative;
                     font-size: 1.8rem;
                     bottom: 0;
                 }
+            }
+            .card:hover{
+                left: calc(50% - 260px);
+                top: calc(50% - 175px);
+                width: 520px;
+                height: 350px;
+                transition: 1s;
             }
         }
     }

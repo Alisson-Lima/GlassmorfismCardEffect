@@ -50,31 +50,31 @@
 
 @-webkit-keyframes circles2 {
   0% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
-  }
-  50% {
     -webkit-transform: translateX(15px);
             transform: translateX(15px);
   }
-  100% {
+  50% {
     -webkit-transform: translateX(-15px);
             transform: translateX(-15px);
+  }
+  100% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
   }
 }
 
 @keyframes circles2 {
   0% {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
-  }
-  50% {
     -webkit-transform: translateX(15px);
             transform: translateX(15px);
   }
-  100% {
+  50% {
     -webkit-transform: translateX(-15px);
             transform: translateX(-15px);
+  }
+  100% {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
   }
 }
 
@@ -124,8 +124,8 @@ body .container .cardContainer .circulo {
   margin-top: 50px;
   border-radius: 100%;
   background: linear-gradient(30deg, #FF007A, #FFAA05);
-  -webkit-animation: circles1 5s linear;
-          animation: circles1 5s linear;
+  -webkit-animation: circles1 5s normal;
+          animation: circles1 5s normal;
   -webkit-animation-direction: linear;
           animation-direction: linear;
   -webkit-animation-iteration-count: infinite;
@@ -137,8 +137,8 @@ body .container .cardContainer .circulo:nth-child(2) {
   height: 150px;
   top: 420px;
   left: -20px;
-  -webkit-animation: circles2 3s normal;
-          animation: circles2 3s normal;
+  -webkit-animation: circles2 5s normal;
+          animation: circles2 5s normal;
   -webkit-animation-direction: normal;
           animation-direction: normal;
   -webkit-animation-iteration-count: infinite;
@@ -169,12 +169,24 @@ body .container .cardContainer .card {
   padding: 50px;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 body .container .cardContainer .card p {
   position: relative;
   font-size: 1.8rem;
   bottom: 0;
+}
+
+body .container .cardContainer .card:hover {
+  left: calc(50% - 260px);
+  top: calc(50% - 175px);
+  width: 520px;
+  height: 350px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 @media screen and (min-width: 700px) {
